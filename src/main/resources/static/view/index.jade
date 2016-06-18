@@ -1,0 +1,58 @@
+doctype html
+html
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0')
+        link(rel="icon" sizes="16x16" type="image/icon" href="/boot.png")
+
+        title Authentication Application
+
+        // ACHTUNG: This is JADE source compiled to index.html, so keep in mind changing
+            this file instead of html.
+
+        // ======================= Libraries
+        // AngularJs 1.5.x
+        script(src='/lib/angular/angular.min.js')
+        // Auth0 Framework
+        script(src='/lib/auth0.js/build/auth0.min.js')
+        // Auth0 Angular Framework
+        script(src='/lib/auth0-angular/build/auth0-angular.min.js')
+        // Auth0 Lock (LoginFrame)
+        script(src='/lib/auth0-lock/build/auth0-lock.min.js')
+        // Angular ngStorage
+        script(src='/lib/ngstorage/ngStorage.min.js')
+        // Angular JWT Helper and Utils
+        script(src='/lib/angular-jwt/dist/angular-jwt.min.js')
+
+        // ======================= Application
+        script(src='/app/app.js')
+        script(src='/app/controllers.js')
+        script(src='/app/services.js')
+        script(src='/app/factories.js')
+
+        // ======================= Styles
+        // Generic Bootstrap CSS Framework
+        link(rel='stylesheet', href='/lib/bootstrap/dist/css/bootstrap.min.css')
+    body
+        div(ng-app="auth")
+            .container(ng-controller="HomeController",style="margin-top: 20px;")
+                h4.text-center Authorization Application Angular 1.5 | Spring Framework
+                .row.text-right
+                    .login(ng-if="!profile")
+                        h4 You are not Authorized, yet.
+                        button.btn.btn-primary(ng-click="signin()") Login Frame
+                    .logout(ng-if="profile")
+                        h4 Hello {{profile.nickname}}, Welcome back!
+                        button.btn.btn-primary(ng-click="signout()") Logout
+                .row.text-center
+                    .btn-group.endpoints
+                        button.btn.btn-info(ng-click="publicEndpoint()") Public
+                        button.btn.btn-warning(ng-click="adminEndpoint()") Admin
+                        button.btn.btn-danger(ng-click="userEndpoint()") User
+                .row
+                    .form-group
+                        label(for='response') Response:
+                        textarea#response.form-control(rows='15',ng-model="message")
+                .row.text-center
+                    button.btn.btn-default(ng-click="clearMessage()") Clear

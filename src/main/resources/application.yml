@@ -1,0 +1,6 @@
+server:
+  port: 7777
+auth:
+  token:
+    id: WIXPBPHwr9BYcOvERocaB6SQWznhJBdm
+    secret: eTKvx-9TK86Olfu4hhA_LJP9StWUhJFks-uaikQQ-PH9TVLzXKqiYC9KwmX4a3Je

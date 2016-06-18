@@ -1,0 +1,35 @@
+== Сборка проекта
+
+Проект в Maven 3, сборка производится командой
+[source,bash]
+----
+mvn clean install
+----
+в результате получается файл auth-app-** в папке /target
+
+Для использования npm модуля произвести
+[source,bash]
+----
+npm install
+----
+Установится Grunt для минифая и компоновки JS (Angular) файлов в один
+
+== Запуск
+
+Запуск проекта
+
+[source,bash]
+----
+java -jar auth-app-0.0.1.RELEASE.jar
+----
+
+Как обычное приложение Spring Boot
+
+== Структура проекта
+
+* src/main/java - исходные файлы для Java Spring Boot, BackEnd
+* src/main/resources - Ресурсы, настройки Boot
+* src/main/resources/static - статичные файлы, для FrontEnd
+* src/main/resources/static/app - Файлы приложенения AngularJS
+* src/main/resources/static/lib - Библиотеки установленные при помощи Bower
+* src/main/resources/static/view - Виды в т.ч. index.jade/html

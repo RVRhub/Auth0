@@ -1,0 +1,28 @@
+{
+  "name": "AuthApp",
+  "authors": [
+    "XaeroZero <dev@zerocode.ru>"
+  ],
+  "description": "Authorization Application",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/main/webapp/resources/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#^1.5.7",
+    "auth0-angular": "^4.2.3",
+    "angular-storage": "^0.5.0",
+    "angular-jwt": "^0.0.9",
+    "ngstorage": "^0.3.10",
+    "bootstrap": "^3.3.6"
+  }
+}

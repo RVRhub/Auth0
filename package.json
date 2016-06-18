@@ -1,0 +1,22 @@
+{
+  "name": "authapp",
+  "version": "1.0.0",
+  "description": "Auth App",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://xaerozero@bitbucket.org/xaerozero/authapp.git"
+  },
+  "author": "Xaero Zero (dev@zerocode.ru)",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/xaerozero/authapp#readme",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-uglify": "^0.11.0"
+  }
+}
